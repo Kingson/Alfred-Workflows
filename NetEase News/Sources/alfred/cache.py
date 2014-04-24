@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
-import os
-import json
-import time
-import shutil
-import codecs
+import os, json, time, shutil, codecs
+import hashlib
 
-import core
-import util
-
+import core, util
 
 # { 'expire_time' : 0, name: '', data' : {} }
 

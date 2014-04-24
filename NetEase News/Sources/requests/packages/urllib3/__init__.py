@@ -1,5 +1,5 @@
 # urllib3/__init__.py
-# Copyright 2008-2012 Andrey Petrov and contributors (see CONTRIBUTORS.txt)
+# Copyright 2008-2013 Andrey Petrov and contributors (see CONTRIBUTORS.txt)
 #
 # This module is part of urllib3 and is released under
 # the MIT License: http://www.opensource.org/licenses/mit-license.php
@@ -11,6 +11,19 @@ urllib3 - Thread-safe connection pooling and re-using.
 __author__ = 'Andrey Petrov (andrey.petrov@shazow.net)'
 __license__ = 'MIT'
 __version__ = 'dev'
+
+
+from .connectionpool import (
+    HTTPConnectionPool,
+    HTTPSConnectionPool,
+    connection_from_url
+)
+
+from . import exceptions
+from .filepost import encode_multipart_formdata
+from .poolmanager import PoolManager, ProxyManager, proxy_from_url
+from .response import HTTPResponse
+from .util import make_headers, get_host, Timeout
 
 
 # Set default logging handler to avoid "No handler found" warnings.

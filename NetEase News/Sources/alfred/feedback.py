@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 from xml.etree import ElementTree
 import xml.sax.saxutils as saxutils
-import copy
+import os, copy, random
 
-import util
-
+import core, util
 
 class Item(object):
     def __init__(self, **kwargs):

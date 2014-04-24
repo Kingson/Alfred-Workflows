@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-import os
-import json
-import codecs
+import os, json, codecs
 
 import core
 

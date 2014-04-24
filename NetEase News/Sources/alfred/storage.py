@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import os
-import urllib
-import subprocess
+import os, urllib, subprocess
 
-import core
-import util
-
+import core, util
 
 _storage_dir = os.path.join('/tmp', core.bundleID())
 

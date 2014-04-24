@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-import os
-import sys
-import plistlib
-import time
-import subprocess
+import os, sys, plistlib, time, subprocess
 
 from feedback import Feedback
 import util

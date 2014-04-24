@@ -4,37 +4,39 @@
 __author__ = 'kingson'
 
 import sys
-
 import alfred
 import requests
 
 
 def set_cache():
+    """
+    获取头条新闻并缓存
+    """
     html = requests.get('http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html').json()
+    respone = html['T1348647853363']
     cache = []
-    for i in range(1, 9):
-        cache.append(dict(title=html['T1348647853363'][i]['title'], digest=html['T1348647853363'][i]['digest'],
-                          url=html['T1348647853363'][i]['url_3w']))
+    for i in range(1, len(respone)):
+        if 'url_3w' in respone[i].keys():
+            cache.append(dict(title=respone[i]['title'], digest=respone[i]['digest'],
+                              url=respone[i]['url_3w']))
     alfred.cache.set('workflow.list', cache, expire=600)
 
 
 def get_cache():
+    """
+    获取缓存信息
+    """
     if alfred.cache.timeout('workflow.list') == -1:
         set_cache()
     return alfred.cache.get('workflow.list')
 
-# def filter(w, query):
-#     return (
-#             len(query)==0 or
-#             w['name'].lower().find(query.lower()) >= 0 or
-#             w['description'].lower().find(query.lower()) >= 0 or
-#             w['author'].lower().find(query.lower()) >= 0
-#         )
 
-
-def search(query):
+def output(query):
+    """
+    返回结果给Alfred
+    """
     workflows = get_cache()
-    workflows = [w for w in workflows if query == True]
+    workflows = [w for w in workflows if query == 'headline']
     feedback = alfred.Feedback()
     for w in workflows:
         feedback.addItem(
@@ -45,5 +47,4 @@ def search(query):
     feedback.output()
 
 if __name__ == '__main__':
-    # set_cache()
-    search(sys.argv[1])
+    output(sys.argv[1])

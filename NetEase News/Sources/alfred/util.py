@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import hashlib
-import random
+import hashlib, random
 
 import core
 
