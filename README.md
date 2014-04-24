@@ -12,5 +12,3 @@ Get news from Netease News.
 ![Screenshots：Type keyword](/Screenshots/type-163.png)
 
 ![Screenshots：Output](/Screenshots/netease-headline.png)
-
-
