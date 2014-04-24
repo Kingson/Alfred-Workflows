@@ -9,8 +9,8 @@
 
 Get news from Netease News.
 
-![Screenshots：Type keyword](https://github.com/Kingson/Alfred-Workflows/blob/master/Screenshots/type%20163.png)
+![Screenshots：Type keyword](https://github.com/Kingson/Alfred-Workflows/blob/master/Screenshots/type-163.png)
 
-![Screenshots：Output](https://github.com/Kingson/Alfred-Workflows/blob/master/Screenshots/netease%20headline.png)
+![Screenshots：Output](https://github.com/Kingson/Alfred-Workflows/blob/master/Screenshots/netease-headline.png)
 
 
