@@ -40,11 +40,11 @@
 				<key>keyword</key>
 				<string>163</string>
 				<key>runningsubtext</key>
-				<string>请稍后，正在努力加载中</string>
+				<string>请稍后，正在努力加载中...</string>
 				<key>script</key>
 				<string>/usr/bin/python neteasenews.py "{query}"</string>
 				<key>subtext</key>
-				<string>获取最新头条新闻，请输入headline</string>
+				<string>获取最新头条新闻，请输入headline，获取最新体育新闻，请输入sport，获取最新财经新闻，请输入finance</string>
 				<key>title</key>
 				<string>获取网易新闻</string>
 				<key>type</key>
